@@ -122,7 +122,7 @@ margin: 0.5rem;
     display: flex;
 }
 
-.match .team .info img {
+.flag {
     width: 24px;
     height: 24px;
     margin-right: 0.5rem;
@@ -136,6 +136,46 @@ margin: 0.5rem;
     width: 40%;
     border-left: 1px solid rgba(var(--body-border-color));
 
+}
+/* table point */
+.point-table{
+max-width: 600px;
+padding: 0.75rem;
+}
+.point-table .group{
+margin-bottom: 2rem;
+}
+.point-table .group .group-title{
+margin-bottom: 0.75rem;
+}
+.point-table .group .row{
+   display: flex;
+   margin: 0.5rem 0;
+}
+.point-table .group .row .col{
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.point-table .group .row .main{
+    flex: 1;
+    justify-content: start;
+}
+.point-table .group .top .col{
+    opacity: 0.7;
+}
+.point-table .group .row .rank{
+    margin:0 0.5rem;
+}
+.point-table .group .teams .row
+{
+    border-left: 4px solid transparent;
+}
+.point-table .group .teams .row:nth-child(1),
+.point-table .group .teams .row:nth-child(2)
+{
+    border-left: 4px solid blue;
 }
 /* hide */
 .hide {
