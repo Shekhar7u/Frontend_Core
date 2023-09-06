@@ -7,7 +7,7 @@ async function register(){
         },
         body:JSON.stringify({
             name:'Reza RAhiminia'
-            email:
+           
         })
     })
 }
