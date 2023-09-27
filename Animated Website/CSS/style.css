@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.cursor {
+    height: 20px;
+    width: 20px;
+    background-color: #95C11E;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+
+.cursorBlur {
+    height: 400px;
+    width: 400px;
+    background-color: #6a7e3539;
+    border-radius: 50%;
+    position: fixed;
+   filter: blur(50px);
+   z-index: 9;
+}
+
+.nav {
+    height: 145px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 120px;
+    gap: 47px;
+    position: fixed;
+    z-index: 99;
+}
+
+.nav img {
+    height: 50px;
+}
+
+.nav h4 {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+.main {
+    position: relative;
+    background-color: rgba(0, 0, 0, .637);
+}
+
+.page1 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 10;
+}
+
+.page1 h1 {
+    font-size: 130px;
+    font-weight: 900;
+    position: relative;
+}
+
+.page1 h1::before {
+    content: "Lets Play";
+    position: absolute;
+    color: black;
+    top: -6px;
+    left: -6px;
+    -webkit-text-stroke: 1px #95C11E;
+    z-index: -1;
+}
+
+.page1 h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.page1 p {
+    font-size: 15px;
+    font-weight: 400;
+    width: 40%;
+}
+
+.page2 {
+    height: 100vh;
+    width: 100%;
+z-index: 10;
+
+}
