@@ -4,6 +4,19 @@
     box-sizing: border-box;
     color: #fff;
 }
+*::selection{
+    background-color: #fff;
+    color: #ACE022;
+}
+body::-webkit-scrollbar{
+    display: block;
+    width: 10px;
+    background-color: #ACE022;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #fff;
+    border-radius: 30px;
+}
 
 html,
 body {
@@ -37,7 +50,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     padding: 0 120px;
-    gap: 47px;
+    gap: 50px;
     position: fixed;
     z-index: 99;
 }
@@ -106,7 +119,7 @@ video {
 }
 
 .page2 {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     z-index: 10;
 
@@ -120,7 +133,8 @@ video {
     position: relative;
     z-index: 10;
 }
-.scroller::-webkit-scrollbar{
+
+.scroller::-webkit-scrollbar {
     display: none;
 }
 
@@ -133,14 +147,15 @@ video {
 
 .scroller h4 {
     display: inline-block;
-    font-size:80px;
+    font-size: 80px;
     font-weight: 700;
     margin-right: 50px;
     color: transparent;
     transition: all linear 0.5s;
-    -webkit-text-stroke: 2px #95C11E ;
+    -webkit-text-stroke: 2px #95C11E;
 }
-.scroller h4:hover{
+
+.scroller h4:hover {
     color: #95C11E;
 }
 
@@ -153,9 +168,10 @@ video {
         transform: translateX(-100%);
     }
 }
-.about{
+
+.about {
     width: 100%;
-    height: 50vh;
+    height: 60vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -164,39 +180,253 @@ video {
     position: relative;
     z-index: 10;
 }
-.about img{
+
+.about img {
     width: 250px;
     height: 200px;
     border-radius: 20px;
     object-fit: cover;
 }
-.aboutUs{
+
+.aboutUs {
     width: 40%;
     text-align: center;
 }
-.aboutUs h3{
+
+.aboutUs h3 {
     font-size: 50px;
     font-weight: 700;
     margin-bottom: 30px;
 }
-.aboutUs p{
+
+.aboutUs p {
     font-size: 20px;
     line-height: 20px;
 }
-.cards-container{
-    background-color: red;
-    height: 60vh;
+
+.cards-container {
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    gap: 50px;
+    gap: 20px;
+    position: relative;
+    z-index: 10;
 }
-.card{
+
+.card {
     height: 80%;
-    width: 25%;
+    width: 30%;
     border-radius: 20px;
     background-color: #95C11E;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+
 }
-#card1{
-    back
+
+#card1 {
+    background-image: url("https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZGF0YXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60");
+
+}
+
+#card2 {
+    background-image: url("https://plus.unsplash.com/premium_photo-1661893983686-9c246656021b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y3JpY2tldHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=700&q=60");
+}
+
+#card3 {
+    background-image: url("https://images.unsplash.com/photo-1562077772-3bd90403f7f0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNyaWNrZXR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=700&q=60");
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #95C11E;
+    padding: 90px 50px;
+    opacity: 0;
+}
+
+.overlay h4 {
+    color: #000;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 800;
+    white-space: nowrap;
+    margin-bottom: 20px;
+    transition: ease in 0.7s;
+}
+
+.overlay p {
+    color: #000;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+.card:hover {
+    transform: rotate3d(1, -1, 0, 20deg);
+}
+
+.green-div {
+    margin-top: 110px;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to left bottom, #95C11E, #63b3075b);
+}
+
+.green-div h4 {
+    font-size: 25px;
+    text-transform: uppercase;
+    line-height: 40px;
+    width: 70%;
+    text-align: center;
+}
+
+.page3 {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.page3>p {
+    font-size: 25px;
+    font-weight: 700;
+    width: 50%;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 40px;
+}
+
+.page3 img {
+    position: absolute;
+    height: 40px;
+}
+
+.page3 #topangle {
+    left: 20%;
+    top: 30%;
+}
+
+.page3 #bottomangle {
+    right: 20%;
+    bottom: 30%;
+}
+
+.page4 {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    position: relative;
+}
+
+.box {
+    height: 70%;
+    width: 24%;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+}
+
+.box h2 {
+    height: 100%;
+    width: 100%;
+    background-color: #95C11E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    border-radius: 20px;
+    color: #000;
+    font-weight: 800;
+    position: absolute;
+    z-index: 10;
+    transition: all ease 0.5s;
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all ease 0.5s;
+
+    scale: 1.7;
+}
+
+.box:hover h2 {
+    color: #fff;
+    background-color: transparent;
+}
+
+.box:hover img {
+    scale: 1;
+}
+
+.page4 h1 {
+    font-size: 86px;
+    position: absolute;
+    top: -20%;
+    font-weight: 900;
+    color: #000;
+    -webkit-text-stroke: 1px #fff;
+
+}
+.footer{
+    width: 100%;
+    height: 40vh;
+    background: linear-gradient(to left bottom, #119F3A,#ACE022);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 160px;
+    padding: 0 100px;
+}
+.footer>img{
+    position: absolute;
+    left: 0;
+    height: 100%;
+    z-index: 0;
+}
+#f1 img{
+    height: 100px;
+}
+#f1, #f2, #f3,#f4{
+    width: fit-content;
+    position: relative;
+    z-index: 2;
+}
+#f2 h3{
+    font-size: 20px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+#f3 h3{
+    font-size: 20px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+#f4 h4{
+    font-size: 18px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 8px;
 }
